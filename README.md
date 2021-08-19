@@ -19,19 +19,28 @@ Taking a tax form name (ex: "Form W-2") and a range of years (inclusive, 2018-20
 
 ## Dependencies Used
 sys - Used for maxsize variable to establish min_year
+
 requests - Used to establish HTTP requests to load webpages and pdf data for both functions
+
 BeautifulSoup - Used to find elements from the HTTP requests
+
 json - Used to convert the list of dictionaries created in tax_forms_data to JSON
+
 os - Used to create the directory for the pdf downloads if it does not currently exist
 
 ## How to run:
 
 tax_forms_data method takes in 1 parameter which is a list of form names
+
 This is tested in main method (print(tax_forms_data(["Form W-2", "Form 1095-C"])))
+
 The method returns JSON, which is printed in our test case to the console
 
+
 tax_forms_download method takes in 3 parameters which is the form name, from year, and to year
+
 This is tested in main method (tax_forms_download("Form W-2", 2018, 2020))
+
 The method will download the "Form W-2" pdfs to the directory where the script is running (in the correctly titled directory with the correctly given filenames)
 
 Both functions are located in main.py
